@@ -25,6 +25,9 @@ public:
 	Interface(Interface&& other) = default;
 	Interface& operator=(Interface&& other) = default;
 
+	Interface(const Interface &other);
+	Interface& operator = (const Interface &other);
+
 	bool is_border() const;
 
 	std::array<std::array<double, 3>, 3> eval_rotation_from_cartesian();
@@ -53,9 +56,6 @@ private:
 
 	long m_neigh;
 	int m_neighFace;
-
-	Interface(const Interface &other) = delete;
-	Interface& operator = (const Interface &other) = delete;
 
 };
 

@@ -9,7 +9,7 @@
 #include <array>
 #include <memory>
 
-#include "binary_stream.hpp"
+#include "BitP_Base_IO.hpp"
 
 /*!
 	\ingroup Common

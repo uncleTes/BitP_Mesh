@@ -33,6 +33,9 @@ public:
 	Cell(Cell&& other) = default;
 	Cell& operator=(Cell&& other) = default;
 
+	Cell(const Cell &other);
+	Cell& operator = (const Cell &other);
+
 	void initialize(ElementInfo::Type type, int nInterfacesPerFace = 0);
 
 	void set_interior(bool interior);
@@ -60,9 +63,6 @@ private:
 	bool m_interior;
 
 	CollapsedVector2D<long> m_interfaces;
-
-	Cell(const Cell &other) = delete;
-	Cell& operator = (const Cell &other) = delete;
 
 };
 

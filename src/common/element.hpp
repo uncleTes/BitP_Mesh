@@ -130,6 +130,9 @@ public:
 	Element(Element&& other) = default;
 	Element& operator=(Element&& other) = default;
 
+	Element(const Element &other);
+	Element& operator = (const Element &other);
+
 	void initialize(ElementInfo::Type type);
 
 	const ElementInfo & get_info() const;
@@ -169,10 +172,6 @@ private:
 	ElementInfo::Type m_type;
 
 	std::unique_ptr<long[]> m_connect;
-
-	Element(const Element &other) = delete;
-	Element& operator = (const Element &other) = delete;
-
 };
 
 /*!
